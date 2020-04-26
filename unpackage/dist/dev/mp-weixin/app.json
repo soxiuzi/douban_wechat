@@ -38,6 +38,7 @@
     "index": "/pages/basics/home",
     "list": "/pages/component/home",
     "mine": "/pages/plugin/home",
-    "cu-custom": "/colorui/components/cu-custom"
-  }
+    "cu-custom": "/components/custom-nav/custom-nav"
+  },
+  "sitemapLocation": "sitemap89.json"
 }

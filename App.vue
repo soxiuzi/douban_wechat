@@ -4,7 +4,6 @@
 		onLaunch: function() {
 			uni.getSystemInfo({
 				success: function(e) {
-					console.log('当前平台：', e)
 					// #ifndef MP
 					Vue.prototype.StatusBar = e.statusBarHeight;
 					if (e.platform == 'android') {

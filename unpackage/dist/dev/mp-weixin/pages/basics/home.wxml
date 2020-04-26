@@ -1,1 +1,1 @@
-<view><scroll-view class="page" scroll-y>首页</scroll-view></view>
+<view style="{{'padding-top:'+(paddingTop+'px')+';'}}"><cu-custom class="customNav" vue-id="0a5f36c6-1" isBack="{{true}}" bgColor="bg-gradual-green" bind:__l="__l" vue-slots="{{['title']}}"><view slot="title">首页</view></cu-custom><scroll-view scroll-y><block wx:for="{{100}}" wx:for-item="item" wx:for-index="__i0__" wx:key="*this"><view>{{''+item+'项'}}</view></block></scroll-view></view>

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class="cu-custom" :style="[{height:CustomBar + 'px'}]">
+		<view class="cu-custom" :style="[{height:CustomBar + addHeight + 'px'}]">
 			<view class="cu-bar fixed" :style="style" :class="[bgImage!=''?'none-bg text-white bg-img':'',bgColor]">
 				<view class="action" @tap="BackPage" v-if="isBack">
 					<text class="cuIcon-back"></text>
@@ -11,11 +11,16 @@
 				</view>
 				<slot name="right"></slot>
 			</view>
+			<view class="custom-search">
+				<text class="cuIcon-search"></text>
+				<input placeholder="输入内容" />
+			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	import uniSearchBar from '../../components/uni-search-bar/uni-search-bar.vue'
 	export default {
 		data() {
 			return {
@@ -24,10 +29,11 @@
 			};
 		},
 		name: 'cu-custom',
+		components: { uniSearchBar },
 		computed: {
 			style() {
-				var StatusBar= this.StatusBar;
-				var CustomBar= this.CustomBar;
+				var StatusBar = this.StatusBar;
+				var CustomBar = this.CustomBar;
 				var bgImage = this.bgImage;
 				var style = `height:${CustomBar}px;padding-top:${StatusBar}px;`;
 				if (this.bgImage) {
@@ -49,6 +55,10 @@
 				type: String,
 				default: ''
 			},
+			addHeight: {
+				type: Number,
+				default: 0
+			}
 		},
 		methods: {
 			BackPage() {
@@ -61,5 +71,7 @@
 </script>
 
 <style>
-
+.custom-search {
+	width: 100%;
+}
 </style>

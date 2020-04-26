@@ -4685,3 +4685,6 @@ scroll-view.cu-steps .cu-item {
 }
 }
 
+.page {
+	padding-bottom: 100rpx;
+}

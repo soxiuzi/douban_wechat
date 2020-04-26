@@ -1,0 +1,27 @@
+
+.custom-nav {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	position: relative;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.custom-nav .search {
+	width: 95%;
+	margin: auto;
+	position: absolute;
+	bottom: 0;
+}
+.custom-nav .title-content {
+	width: 100%;
+	text-align: center;
+	margin-top: 30rpx;
+	font-size: 35rpx;
+}
+.custom-nav .left {
+	float: left;
+	margin-left: 15rpx;
+}
+

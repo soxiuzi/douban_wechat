@@ -29,9 +29,9 @@
 <script>
 	export default {
 		data() {
-		return {
-				PageCur: 'index'
-			}
+			return {
+					PageCur: 'index'
+				}
 		},
 		methods: {
 			NavChange: function(e) {

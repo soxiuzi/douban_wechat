@@ -104,11 +104,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"pages/basics/home":1,"pages/component/home":1,"pages/plugin/home":1};
+/******/ 		var cssChunks = {"components/custom-nav/custom-nav":1,"pages/component/home":1,"pages/plugin/home":1,"components/uni-search-bar/uni-search-bar":1,"components/uni-icons/uni-icons":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"colorui/components/cu-custom":"colorui/components/cu-custom","pages/basics/home":"pages/basics/home","pages/component/home":"pages/component/home","pages/plugin/home":"pages/plugin/home"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/custom-nav/custom-nav":"components/custom-nav/custom-nav","pages/basics/home":"pages/basics/home","pages/component/home":"pages/component/home","pages/plugin/home":"pages/plugin/home","components/uni-search-bar/uni-search-bar":"components/uni-search-bar/uni-search-bar","components/uni-icons/uni-icons":"components/uni-icons/uni-icons"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
