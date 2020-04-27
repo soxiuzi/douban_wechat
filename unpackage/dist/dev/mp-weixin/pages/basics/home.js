@@ -43,7 +43,7 @@ component.options.__file = "myProject/wechat/douban_wechaat/pages/basics/home.vu
 /*!***********************************************************************************************!*\
   !*** D:/myProject/wechat/douban_wechaat/pages/basics/home.vue?vue&type=template&id=7a6d603f& ***!
   \***********************************************************************************************/
-/*! no static exports found */
+/*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -112,32 +112,39 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var movieItem = function movieItem() {__webpack_require__.e(/*! require.ensure | components/custom-movie--item/custom-movie--item */ "components/custom-movie--item/custom-movie--item").then((function () {return resolve(__webpack_require__(/*! @/components/custom-movie--item/custom-movie--item.vue */ 259));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   name: "index",
+  components: { movieItem: movieItem },
   data: function data() {
     return {
       CustomBar: this.CustomBar,
-      showSearch: false,
-      paddingTop: 0 };
+      showSearch: true,
+      marginTop: 0 };
 
   },
-  created: function created() {
-    this.paddingTop = this.showSearch ? 105 : 60;
-  } };exports.default = _default;
+  methods: {
+    // 设置滚动栏初始margin
+    setMarginTop: function setMarginTop(height) {
+      var that = this;
+      this.marginTop = height;
+    },
+    searchMovies: function searchMovies(keyword) {
+      console.log('搜索关键字：', keyword);
+    } } };exports.default = _default;
 
 /***/ })
 

@@ -1,5 +1,5 @@
 <template>
-	<view style="position: fixed;width: 100%;z-index: 1001;top: 0">
+	<view id="box" style="position: fixed;width: 100%;z-index: 1001;top: 0">
 		<view :style="style" :class="[bgColor]" class="custom-nav">
 			<view class="title-content">
 				<view class="left" @tap="backPage" v-if="isBack">
@@ -58,11 +58,21 @@
 			}
 		},
 		methods: {
+			// 返回上一页
 			backPage() {
 				uni.navigateBack({
 					delta: 1
 				})
+			},
+			search(e) {
+				this.$emit('submitSearch', e.value)
 			}
+		},
+		mounted() {
+			let info = uni.createSelectorQuery().in(this).select("#box")
+			info.boundingClientRect(data => {
+				this.$emit('customHeight', data.height)
+			}).exec()
 		}
 	}
 </script>

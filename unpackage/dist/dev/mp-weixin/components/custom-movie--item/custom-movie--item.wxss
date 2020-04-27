@@ -1,0 +1,24 @@
+
+.movie-item {
+	white-space: nowrap;
+}
+.movie-item .item-top {
+	margin: 20rpx 20rpx 0;
+}
+.movie-container {
+	width: 100vw;
+	padding: 20rpx 0;
+}
+.item-content {
+	display: inline-block;
+	margin: 0 20rpx;
+	width: 23%;
+}
+.item-content image {
+	border-radius: 15rpx;
+}
+.item-content .movie-name {
+	display: block;
+	margin: 8rpx 0;
+}
+

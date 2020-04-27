@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "movie-item": "/components/custom-movie--item/custom-movie--item"
+  },
   "component": true
 }
